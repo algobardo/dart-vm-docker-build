@@ -18,7 +18,7 @@ RUN apt-get -yq install software-properties-common python-software-properties bz
     && apt-get autoremove -y \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git 
+RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git && pwd && ls
 ADD depot_tools depot_tools
 env PATH /root/depot_tools:$PATH
 RUN gclient config https://github.com/dart-lang/sdk.git && gclient sync -r 1.14.2
