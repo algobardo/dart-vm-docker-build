@@ -18,6 +18,4 @@ RUN apt-get -yq install software-properties-common python-software-properties bz
     && apt-get autoremove -y \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-USER chromium
-
 RUN gclient config https://github.com/dart-lang/sdk.git && gclient sync -r 1.14.2
