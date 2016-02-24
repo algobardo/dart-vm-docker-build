@@ -22,3 +22,5 @@ RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 env PATH /depot_tools:$PATH
 WORKDIR /root
 RUN gclient config https://github.com/dart-lang/sdk.git && gclient sync -r 1.14.2
+RUN mv sdk reference_sdk
+
