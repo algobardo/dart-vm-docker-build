@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.4
+FROM ubuntu:15.10
 
 # https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md
 
