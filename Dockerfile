@@ -8,7 +8,7 @@ FROM ubuntu:14.04.4
 #    && echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates multiverse"      >> /etc/apt/sources.list \
 #    && echo "deb-src http://us.archive.ubuntu.com/ubuntu/ trusty-updates multiverse"  >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -yq openjdk-7-jre apt-transport-https
+RUN apt-get update && apt-get install -yq openjdk-7-jre apt-transport-https curl
 
 # Get the Google Linux package signing key.
 RUN curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
